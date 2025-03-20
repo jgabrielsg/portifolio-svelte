@@ -16,14 +16,12 @@ function $$ (selector, context = document) {
 // let currentLink = navLinks.find(a => a.host === location.host && a.pathname === location.pathname);
 // currentLink?.classList.add("current");
 
-let BASE_URL = "/portifolio-svelte/";
-
 let pages = [
-    { url: new URL(BASE_URL, location.origin).pathname, title: "Home" },
-    { url: new URL("projects", BASE_URL).pathname, title: "Projects" },
-    { url: new URL("resume", BASE_URL).pathname, title: "Resume" },
-    { url: new URL("contacts", BASE_URL).pathname, title: "Contacts" },
-    { url: "https://github.com/jgabrielsg/", title: "GitHub" },
+    {url: "./", title: "Home"},
+    {url: "projects", title: "Projects"},
+    {url: "resume", title: "Resume"},
+    {url: "contacts", title: "Contacts"},
+    {url: "https://github.com/jgabrielsg/", title: "GitHub"},
 ];
 
 let nav = document.createElement("nav");
