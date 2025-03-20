@@ -31,10 +31,10 @@ for (let p of pages) {
     let url = p.url;
     let title = p.title;
     // Create link and add it to nav
-    const ARE_WE_HOME = document.documentElement.classList.contains("home");
-    if (!ARE_WE_HOME && !url.startsWith("http")) {
-        url = "../" + url;
-    }
+    // const ARE_WE_HOME = document.documentElement.classList.contains("home");
+    // if (!ARE_WE_HOME && !url.startsWith("http")) {
+    //     url = "../" + url;
+    // }
     
     let a = document.createElement("a");
     a.href = url;
