@@ -1,0 +1,215 @@
+html {
+    color-scheme: light dark;
+}
+
+body {
+	font: 100%/1.5 system-ui;
+	max-width: 1980px;
+	margin-inline: auto;
+}
+
+:root {
+	--grey: oklch(80% 3% 200);
+	--white: #ffffff;
+	--color-background: rgb(17, 99, 85);
+	--color-a-hover: rgb(201, 198, 198);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.video-container {
+	position: fixed;
+	top: 0;
+	width: 2000px;
+	height: 100vh;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.video-container video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.start {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	font-family: Arial, sans-serif;
+	z-index: 1; 
+}
+
+.start h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.start p {
+	font-size: 1.5rem;
+}
+
+.top-name {
+	position: relative;
+	width: 100%;
+	height: 5%;
+	background-color: var(--color-background);
+	color: white;
+	display: flex;
+	justify-content: center;
+	z-index: 99;
+}
+
+.overlay {
+	position: fixed;
+	width: 2000px;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 0;
+}
+
+nav {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background-color: var(--color-background);
+	display: flex;
+	z-index: 99;
+	justify-content: center;
+	padding: 1rem 0;
+	--border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
+}
+
+nav a {
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	z-index: 100;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	margin: 0 1rem;
+	padding: 0.5rem 0;
+	position: relative;
+	transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+nav a:hover {
+	color: var(--color-a-hover);
+}
+
+nav a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px; 
+	width: 100%;
+	height: 3px; 
+	background-color: transparent;
+	transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+	background-color: var(--color-a-hover);
+}
+
+nav .current {
+	color: rgb(230, 201, 159);
+}
+
+nav .current::after {
+	background-color: rgb(230, 201, 159);
+}
+
+.container {
+	position: relative;
+	margin: 2% 4%;
+	padding: 1% 2%;
+	height: 78vh;
+	background-color: rgb(255, 255, 255);
+	z-index: 99;
+}
+
+.container-title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.text-box {
+	position: relative;
+	width: 100%;
+	margin-bottom: 2%;
+}
+
+.text-box h3 {
+	color: rgb(31, 31, 31);
+	font-size: 30px;
+}
+
+.text-box ul {
+    list-style: none; 
+    padding-left: 0; 
+}
+
+.text-box ul li {
+    margin-left: 2%; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+	grid-template-columns: auto 1fr;
+}
+
+form label {
+	display: grid;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+	grid-template-columns: subgrid;
+}
+
+label, button {
+	grid-column: 1 / -1;
+}
+
+input, textarea {
+    width: 100%; 
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+	margin: 0px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(17, 99, 85);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(14, 80, 70);
+}
+
+.clickButtons {
+	display: flex;
+	
+}
