@@ -9,7 +9,7 @@
 <!-- Contêiner do Vídeo -->
 <div class="video-container">
     <video autoplay muted loop>
-        <source src="/images/lindo.mp4" type="video/mp4">
+        <source src="images/lindo.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </div>
