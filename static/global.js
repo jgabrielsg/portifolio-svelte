@@ -17,10 +17,10 @@ function $$ (selector, context = document) {
 // currentLink?.classList.add("current");
 
 let pages = [
-    {url: "./", title: "Home"},
-    {url: "projects", title: "Projects"},
-    {url: "resume", title: "Resume"},
-    {url: "contacts", title: "Contacts"},
+    {url: "portifolio-svelte/", title: "Home"},
+    {url: "portifolio-svelte/projects", title: "Projects"},
+    {url: "portifolio-svelte/resume", title: "Resume"},
+    {url: "portifolio-svelte/contacts", title: "Contacts"},
     {url: "https://github.com/jgabrielsg/", title: "GitHub"},
 ];
 
